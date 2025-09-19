@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+
+
+  <script>
+    const details ={
+      name:'Ologun Folahan',
+      level:'300 level',
+      matricNo:'15314',
+      hobbie:'Talking',
+    };
+
+
+    const product2={
+
+      name:'shirt',
+      'delivery-time':'1 day',
+      rating:{
+        stars:4.5,
+        rating:87,
+      },
+      fun: function(){
+        consol.log('Function inside a method')
+      }
+    };
+
+    console.log(details)
+    delete details.hobbie;
+    console.log(details)
+    console.log(product2.rating.stars)
+
+    /*
+    objects take in function.
+    There are other ways to call properties of an object. we have the dot notation an the [] notation. []notations helps with properties that .notation can't access eg, prodect2.deliver-time. because of the maths sign, Js would try to do maths but with [] it adds it as it should be
+
+    JSON is another JS just that it is universerly accepted and JS isn't.  
+    Changing JSON to javaScipt and back 
+    */
+
+
+    console.log(JSON.stringify(product2));
+    const jsonString = JSON.stringify(product2);
+    console.log(JSON.parse(jsonString))
+  </script>
+
+</body>
+</html>

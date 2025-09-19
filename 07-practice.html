@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>07-Practice</title>
+</head>
+<body>
+  <script>
+    function greet(name,){
+      if(name){
+        console.log(`Hello ${name}`)
+      }else{
+        console.log(`Hello there!`)
+      };
+    }
+    greet();
+    greet('Fola');
+
+
+    function convertToCelcius(Fahrenheit){
+      console.log((Fahrenheit-32)*5/9)
+      return;
+    };
+    function convertToFahrenheit(celsius){
+      console.log((celsius *9/5)+32)
+      return
+    };
+
+    convertToCelcius(86);
+    convertToFahrenheit(25);
+
+
+    function converTemperature(degree, unit){
+      // console.log(`${(degree-32)*5/9}${unit}`)
+      console.log(`${convertToCelcius(degree)} ${unit}`);
+      return; 
+    };
+    converTemperature(86,'F');
+  </script>
+</body>
+</html>

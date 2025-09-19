@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practice</title>
+</head>
+<body>
+  <p>
+    <button onclick=
+      "
+      const computerGuess=Math.random();
+      let result='';
+      const guess='Head'
+      if(computerGuess>= 0.5){
+        result ='Head'
+      }else{
+        result ='Tails'
+      };
+
+      if(guess === result){
+        console.log('You win')
+      } else{
+        console.log('You lost')
+      };
+
+
+      
+      
+      ">Heads</button>
+    <button onclick=
+      "
+      const computerGuess=Math.random();
+      let result='';
+      const guess='Tails'
+      if(computerGuess>= 0.5){
+        result ='Head'
+      }else{
+        result ='Tails'
+      };
+
+      if(guess === result){
+        console.log('You win')
+      } else{
+        console.log('You lost')
+      };
+
+
+      
+      
+      ">Tails</button>
+  </p>
+
+  <script>
+    const Time= 19;
+    const Name ='Folahanmi';
+    if(Time >=6 && Time <=12 ){
+      console.log(`The time is ${Time}:00, Good Morning ${Name}`)
+    } else if(Time >12 && Time <=17 ){
+      console.log(`The time is ${Time}:00, Good Afternoon${Name}`)
+    } else if(Time >17 && Time <=20){
+      console.log(`The time is ${Time}:00, Good Evening ${Name}`)
+    } else{
+      console.log(`The time is ${Time}:00, Good Night! ${Name}`)
+    } ;
+
+    const age=89;
+    const Holiday=0;
+    if((age <=6 || age >=65) && Holiday){
+      console.log('Discounted Mate')
+
+    } else if((age <=6 || age >=65) &&! Holiday){
+      console.log('Come back during holiday')
+
+    }
+    else{
+      console.log("Sorry, you're not qualified for our discount")
+    };
+
+
+  </script>
+</body>
+</html>

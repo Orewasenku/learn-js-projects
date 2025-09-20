@@ -9,6 +9,7 @@
 
 
   <script>
+    /*
     const details ={
       name:'Ologun Folahan',
       level:'300 level',
@@ -16,37 +17,116 @@
       hobbie:'Talking',
     };
 
+    console.log(details.level)
+    console.log(details.hobbie)
+    details.name ='Senku'
 
-    const product2={
-
-      name:'shirt',
-      'delivery-time':'1 day',
-      rating:{
-        stars:4.5,
-        rating:87,
-      },
-      fun: function(){
-        consol.log('Function inside a method')
-      }
-    };
-
+    details.bestfood='Pounded yam'
+    delete details.bestfood
     console.log(details)
     delete details.hobbie;
     console.log(details)
+    */
+    const product2={
+      name:'shirt',
+      ['delivery-time']:'1 day',
+      rating:{
+        stars:4.5,
+        count:87
+      },
+      fun: function function1(){
+        console.log('Function inside an Object')
+      }
+    };
+
+    /* Square brackets are used to modify what dot notations can't EG
+
+    console.log(product2.delivery-time)
+
+    this shows an error with dot notation but goes well with square brackets
+    console.log(product2['delivery-time'])
+
+    Object + Fuction = Method
+    */
+    console.log(product2.name)
+    console.log(product2['name'])
+    console.log(product2['delivery-time'])
     console.log(product2.rating.stars)
+    product2.fun()
 
+    
+    
+    console.log(product2)
     /*
-    objects take in function.
-    There are other ways to call properties of an object. we have the dot notation an the [] notation. []notations helps with properties that .notation can't access eg, prodect2.deliver-time. because of the maths sign, Js would try to do maths but with [] it adds it as it should be
-
     JSON is another JS just that it is universerly accepted and JS isn't.  
-    Changing JSON to javaScipt and back 
+    Changing JSON to javaScipt, we use JSON.parce()
+    Changing javaScript to JSON, we use JSON.stringify()
     */
 
 
     console.log(JSON.stringify(product2));
     const jsonString = JSON.stringify(product2);
     console.log(JSON.parse(jsonString))
+
+    /*
+    We also use another built in method localstorage    
+    */
+    localStorage.setItem('message','hello');
+    console.log(localStorage.getItem('message'))
+    
+    console.log(
+      'hello'.length,
+      'hello'.toUpperCase()
+    )
+    console.log('hello'.toUpperCase())
+
+    /*
+    Objects are refrences. the properties are actually stored in the systmes memory and then they are refrenced by the name: object 1
+    */
+   const object1={
+    message: 'Hello'
+   };
+   const object2=object1;
+   object1.message='Good job!'
+   console.log(object1);
+   console.log(object2);
+
+   const object3={
+    message: 'Good job!'
+   };
+   console.log(object3===object1)
+   console.log(object2===object1)
+
+   const object4={
+    message: 'Good job!',
+    price: 799
+   };
+   //const message= object4.message; DESTRUCTURING!!
+   const{message,price}=object4;
+   console.log(
+    message,
+    price
+   )
+
+   const object5={
+    // message : message 
+    // if property and variable name are the same, we use SHORTHAND PROPERTY 
+    message,
+    // method: function function1(){
+    //   console.log('method')
+
+    // }
+    //  SHORTHAND METHOD
+    method(){
+      console.log('method')
+    }
+   };
+  
+
+
+   console.log(object5);
+   object5.method();
+
   </script>
 
 </body>
